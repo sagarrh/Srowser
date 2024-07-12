@@ -57,7 +57,7 @@ class webbrowser(QMainWindow):
 domain_extensions = [
     ".com", ".org", ".net", ".edu", ".gov", ".mil", ".biz", ".info", 
     ".mobi", ".name", ".pro", ".coop", ".aero", ".jobs", ".museum", 
-    ".travel", ".asia", ".cat", ".tel", ".xxx",".app",".me",".xyz"
+    ".travel", ".asia", ".cat", ".tel",".app",".me",".xyz"
 ]
 app=QApplication([])
 
