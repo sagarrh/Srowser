@@ -46,15 +46,19 @@ class webbrowser(QMainWindow):
         self.browser.setUrl(QUrl("http://google.com"))
         self.window.setLayout(self.layout) 
         self.window.show()
-
+    
     def navigate(self,url):
-        if not url.startswith('http'):
-            url='http://'+url
+        if not url.startswith('http') or not any(url.endswith(ext) for ext in domain_extensions):
+            url='https://www.google.com/search?q='+url
             self.url_bar.setText(url)
             
         self.browser.setUrl(QUrl(url))
 
-
+domain_extensions = [
+    ".com", ".org", ".net", ".edu", ".gov", ".mil", ".biz", ".info", 
+    ".mobi", ".name", ".pro", ".coop", ".aero", ".jobs", ".museum", 
+    ".travel", ".asia", ".cat", ".tel", ".xxx",".app",".me",".xyz"
+]
 app=QApplication([])
 
 window=webbrowser()
