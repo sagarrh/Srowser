@@ -55,6 +55,7 @@ class webbrowser(QMainWindow):
 
 
 app=QApplication([])
+
 window=webbrowser()
 app.exec_()
 
