@@ -51,6 +51,7 @@ class webbrowser(QMainWindow):
         if not url.startswith('http'):
             url='http://'+url
             self.url_bar.setText(url)
+            
         self.browser.setUrl(QUrl(url))
 
 
